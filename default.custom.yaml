@@ -1,0 +1,16 @@
+patch:
+  "ascii_composer/good_old_caps_lock": true # 允许 Caps Lock 键锁定英文大写
+  "ascii_composer/switch_key": # 按住此键时，按下英文字符键切换英文大写
+    Caps_Lock: noop # 禁用 Caps Lock 键切换英文大写
+    Control_L: noop # 禁用左 Ctrl 键切换英文大写
+    Control_R: noop # 禁用右 Ctrl 键切换英文大写
+    Shift_L: commit_code # 左 Shift 键切换英文大写
+    Shift_R: commit_code # 右 Shift 键切换英文大写
+  "key_binder/bindings":
+  - {accept: bracketleft, send: Page_Up, when: paging} # [ 键发送 Page Up
+  - {accept: bracketright, send: Page_Down, when: has_menu} # ] 键发送 Page Down
+  - {accept: minus, send: Page_Up, when: paging} # - 键发送 Page Up 
+  - {accept: equal, send: Page_Down, when: has_menu} # = 键发送 Page Down
+  schema_list:
+  - {schema: flypy} # 小鹤音形
+  - {schema: double_pinyin_flypy} # 小鹤双拼
