@@ -84,55 +84,83 @@ speller:
   - xform/ui$/V/
   - xform/in$/B/
   - xlit/QWRTYUIOPSDFGHJKLZXCVBNM/qwrtyuiopsdfghjklzxcvbnm/
-  #- abbrev/^(.).+$/$1/
+  - 'abbrev/^([a-z]{2}).+$/$1/'
 
 translator:
-  dictionary: luna_pinyin
-  prism: double_pinyin_flypy
+  dictionary: flypy_full
+  enable_user_dict: false
   preedit_format:
-  - xform/([bpmfdtnljqx])n/$1iao/
-  - xform/(\w)g/$1eng/
-  - xform/(\w)q/$1iu/
-  - xform/(\w)w/$1ei/
-  - xform/([dtnlgkhjqxyvuirzcs])r/$1uan/
-  - xform/(\w)t/$1ve/
-  - xform/(\w)y/$1un/
-  - xform/([dtnlgkhvuirzcs])o/$1uo/
-  - xform/(\w)p/$1ie/
-  - xform/([jqx])s/$1iong/
-  - xform/(\w)s/$1ong/
-  - xform/(\w)d/$1ai/
-  - xform/(\w)f/$1en/
-  - xform/(\w)h/$1ang/
-  - xform/(\w)j/$1an/
-  - xform/([gkhvuirzcs])k/$1uai/
-  - xform/(\w)k/$1ing/
-  - xform/([jqxnl])l/$1iang/
-  - xform/(\w)l/$1uang/
-  - xform/(\w)z/$1ou/
-  - xform/([gkhvuirzcs])x/$1ua/
-  - xform/(\w)x/$1ia/
-  - xform/(\w)c/$1ao/
-  - xform/([dtgkhvuirzcs])v/$1ui/
-  - xform/(\w)b/$1in/
-  - xform/(\w)m/$1ian/
-  - xform/([aoe])\1(\w)/$1$2/
-  - "xform/(^|[ '])v/$1zh/"
-  - "xform/(^|[ '])i/$1ch/"
-  - "xform/(^|[ '])u/$1sh/"
-  - xform/([jqxy])v/$1u/
-  - xform/([nl])v/$1ü/
+  - xform/^of/符号/
+  - xform/(^|[ '])([bpmfdtnljqx])n/$1$2iao/
+  - xform/(^|[ '])(\w)g/$1$2eng/
+  - xform/(^|[ '])(\w)q/$1$2iu/
+  - xform/(^|[ '])(\w)w/$1$2ei/
+  - xform/(^|[ '])([dtnlgkhjqxyvuirzcs])r/$1$2uan/
+  - xform/(^|[ '])(\w)t/$1$2ve/
+  - xform/(^|[ '])(\w)y/$1$2un/
+  - xform/(^|[ '])([dtnlgkhvuirzcs])o/$1$2uo/
+  - xform/(^|[ '])(\w)p/$1$2ie/
+  - xform/(^|[ '])([jqx])s/$1$2iong/
+  - xform/(^|[ '])(\w)s/$1$2ong/
+  - xform/(^|[ '])(\w)d/$1$2ai/
+  - xform/(^|[ '])(\w)f/$1$2en/
+  - xform/(^|[ '])(\w)h/$1$2ang/
+  - xform/(^|[ '])(\w)j/$1$2an/
+  - xform/(^|[ '])([gkhvuirzcs])k/$1$2uai/
+  - xform/(^|[ '])(\w)k/$1$2ing/
+  - xform/(^|[ '])([jqxnl])l/$1$2iang/
+  - xform/(^|[ '])(\w)l/$1$2uang/
+  - xform/(^|[ '])(\w)z/$1$2ou/
+  - xform/(^|[ '])([gkhvuirzcs])x/$1$2ua/
+  - xform/(^|[ '])(\w)x/$1$2ia/
+  - xform/(^|[ '])(\w)c/$1$2ao/
+  - xform/(^|[ '])([dtgkhvuirzcs])v/$1$2ui/
+  - xform/(^|[ '])(\w)b/$1$2in/
+  - xform/(^|[ '])(\w)m/$1$2ian/
+  - xform/(^|[ '])([aoe])\1(\w)/$1$2$2/
+  - xform/(^|[ '])v/$1zh/
+  - xform/(^|[ '])i/$1ch/
+  - xform/(^|[ '])u/$1sh/
+  - xform/(^|[ '])([jqxy])v/$1$2u/
+  - xform/(^|[ '])([nl])v/$1$2ü/
 
 reverse_lookup:
-  dictionary: stroke
+  dictionary: flypy_full
   enable_completion: true
-  prefix: "`"
-  suffix: "'"
-  tips: (笔划)
+  suffix: "`"
   preedit_format:
-  - xlit/hspnz/一丨丿丶乙/
-  comment_format:
-  - xform/([nl])v/$1ü/
+  - xform/^([bpmfdtnljqx])n/$1iao/
+  - xform/^(\w)g/$1eng/
+  - xform/^(\w)q/$1iu/
+  - xform/^(\w)w/$1ei/
+  - xform/^([dtnlgkhjqxyvuirzcs])r/$1uan/
+  - xform/^(\w)t/$1ve/
+  - xform/^(\w)y/$1un/
+  - xform/^([dtnlgkhvuirzcs])o/$1uo/
+  - xform/^(\w)p/$1ie/
+  - xform/^([jqx])s/$1iong/
+  - xform/^(\w)s/$1ong/
+  - xform/^(\w)d/$1ai/
+  - xform/^(\w)f/$1en/
+  - xform/^(\w)h/$1ang/
+  - xform/^(\w)j/$1an/
+  - xform/^([gkhvuirzcs])k/$1uai/
+  - xform/^(\w)k/$1ing/
+  - xform/^([jqxnl])l/$1iang/
+  - xform/^(\w)l/$1uang/
+  - xform/^(\w)z/$1ou/
+  - xform/^([gkhvuirzcs])x/$1ua/
+  - xform/^(\w)x/$1ia/
+  - xform/^(\w)c/$1ao/
+  - xform/^([dtgkhvuirzcs])v/$1ui/
+  - xform/^(\w)b/$1in/
+  - xform/^(\w)m/$1ian/
+  - xform/^([aoe])\1(\w)/$1$2/
+  - xform/^v/zh/
+  - xform/^i/ch/
+  - xform/^u/sh/
+  - xform/^([jqxy])v/$1u/
+  - xform/^([nl])v/$1ü/
 
 punctuator:
   import_preset: default
@@ -143,4 +171,4 @@ key_binder:
 recognizer:
   import_preset: default
   patterns:
-    reverse_lookup: "`[a-z]*'?$"
+    reverse_lookup: "[a-z]*`$"

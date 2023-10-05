@@ -14,5 +14,4 @@ patch:
     - {accept: minus, send: Page_Up, when: paging} # - 键发送 Page Up 
     - {accept: equal, send: Page_Down, when: has_menu} # = 键发送 Page Down
   schema_list:
-  - {schema: flypy} # 小鹤音形
   - {schema: double_pinyin_flypy} # 小鹤双拼
