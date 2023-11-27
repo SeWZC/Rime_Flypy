@@ -52,6 +52,7 @@ speller:
   alphabet: zyxwvutsrqponmlkjihgfedcba
   delimiter: " '"
   algebra:
+  - 'abbrev/^([a-z]{2}).+$/$1/'
   # - erase/^xx$/
   # - derive/^([jqxy])u$/$1v/
   # - derive/^([aoe])([ioun])$/$1$1$2/
@@ -82,7 +83,6 @@ speller:
   # - xform/ui$/V/
   # - xform/in$/B/
   - xlit/QWRTYUIOPSDFGHJKLZXCVBNM/qwrtyuiopsdfghjklzxcvbnm/
-  - 'abbrev/^([a-z]{2}).+$/$1/'
 
 translator:
   dictionary: flypy_full
@@ -124,7 +124,7 @@ translator:
 reverse_lookup:
   dictionary: flypy_full
   enable_completion: true
-  suffix: "`"
+  # suffix: "`"
   preedit_format:
   - xform/^([bpmfdtnljqx])n/$1iao/
   - xform/^(\w)g/$1eng/
@@ -168,4 +168,4 @@ key_binder:
 recognizer:
   import_preset: default
   patterns:
-    reverse_lookup: "[a-z]*`$"
+    reverse_lookup: "[a-z]*$"
