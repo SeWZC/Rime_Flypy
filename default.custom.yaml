@@ -15,3 +15,6 @@ patch:
     - {accept: equal, send: Page_Down, when: has_menu} # = 键发送 Page Down
   schema_list:
   - {schema: double_pinyin_flypy} # 小鹤双拼
+  switcher:
+    hotkeys:
+      - "Control+grave"
